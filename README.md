@@ -20,3 +20,13 @@ kafka-topics.bat --create --topic connected-cars-topic --zookeeper localhost:218
 
 # To Check the Kafka Published Messages
 \kafka\bin\windows>kafka-console-consumer.bat --bootstrap-server LT167-Revanas.aditiconsulting.com:9092 --topic connected-cars-topic
+
+
+# EndPoints
+POST - http://localhost:8081/connected/car/save
+--header 'file-type: xml'
+
+PUT - http://localhost:8081/connected/car/update
+--header 'file-type: xml'
+
+GET - http://localhost:8081/connected/car/filedata
